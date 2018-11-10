@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>range5</title>
+</head>
+<body>
+	<script>
+		function cloneRange(){
+			var rangeObj = document.createRange();
+			var div = document.getElementById("p");
+			// 获取内容
+			rangeObj.selectNodeContents(div);
+			// cloneRange克隆内容
+			var rangeClone = rangeObj.cloneRange();
+			// 转换为字符串打印出来
+			alert(rangeClone.toString());
+		}
+	</script>
+	<div id="p">这个是随便书写的内容</div>
+	<button onclick="cloneRange()">克隆</button>
+</body>
+</html>

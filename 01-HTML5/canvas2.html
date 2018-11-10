@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas2</title>
+	<script>
+		function draw(id){
+			var canvas = document.getElementById("canvas");
+			// 判断id中是否创建
+			if (canvas == null) {
+				return false;
+			}
+			// 创建2d图形
+			var context = canvas.getContext("2d");
+			// 指定一个颜色
+			context.fillStyle = "#eeeeef";
+			// 然后指定一个图形
+			context.fillRect(0,0,600,700);
+			// 绘制一个矩形
+			for(var i = 0; i<=10; i++){
+				// 绘制的路径
+				context.beginPath();
+				// 圆形 
+				context.arc(i*25,i*25,i*10,0,Math.PI*2,true);
+				// 关闭路径
+				context.closePath();
+				// 圆形样式
+				context.fillStyle = "rgba(255,0,0,0.25)";
+				// 绘制成功
+				context.fill();
+			}
+		}
+	</script>
+</head>
+<body onload="draw('canvas')">
+	<!-- 第一开始创建路径 -->
+	<!-- 第二创建图形的路径 -->
+	<!-- 第三路径创建完成后关闭路径 -->
+	<!-- 第四设置绘制的样式及路径 -->
+	<canvas id="canvas" width="600px" height="700px"></canvas>
+</body>
+</html>

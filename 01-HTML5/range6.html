@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>range6</title>
+</head>
+<body>
+	<script>
+		function cloneContent(){
+			// 获取当前的div
+			var div = document.getElementById("div");
+			// 创建Range对象
+			var rangeObj = document.createRange();
+			// 获取id为div中的内容
+			rangeObj.selectNodeContents(div);
+			// 克隆 id为div中的内容
+			var docFrangMent = rangeObj.cloneContents();
+			// 追加克隆
+			div.appendChild(docFrangMent);
+		}
+	</script>
+	<div id="div">
+	你好么！
+	<br>
+	<button onclick="cloneContent()">克隆</button>
+	<br>
+	</div>
+</body>
+</html

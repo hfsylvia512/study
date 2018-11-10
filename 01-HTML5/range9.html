@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>range5</title>
+</head>
+<body>
+	<script>
+		function textPlace(){
+			var boldTest = document.getElementById("boldTest");
+			var boldRange = document.createRange();
+			boldRange.selectNodeContents(boldTest.firstChild);
+			var selection = document.getSelection();
+			if (selection.rangeCount>0) {
+				var selRange = selection.getRangeAt(0);
+				if (selRange.compareBoundaryPoints(Range.START_TO_END,boldRange)<=0) {
+					alert("选取的文字是粗体的前面");
+				}else{
+					if (selRange.compareBoundaryPoints(Range.END_TO_START,boldRange)>=0) {
+						alert("选取的文字是粗体的后面");
+					}
+				}
+			}
+		}
+	</script>
+	空手道解放螺丝钉jfk速度jfk了受到收<b id="boldTest">笑容最重要</b>到扣费角度思考浪费时间地方昆仑山地方就
+	<br>
+	<button onclick="textPlace()">位置比较</button>
+</body>
+</html>

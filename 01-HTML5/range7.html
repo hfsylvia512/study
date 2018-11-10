@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>range7</title>
+</head>
+<body>
+	<script>
+		function moveContent(){
+			// 获取第一个id为srcDiv
+			var srcDiv = document.getElementById("srcDiv");
+			// 获取第二个id为distDiv
+			var distDiv = document.getElementById("distDiv");
+			// 获取range对象
+			var rangeObj = document.createRange();
+			rangeObj.selectNodeContents(srcDiv);
+			// extractContents删除文档内容
+			var docFragment = rangeObj.extractContents();
+			// appendChild:向节点添加最后一个子节点
+			distDiv.appendChild(docFragment);
+
+		}
+	</script>
+	<div id="srcDiv" style="background-color:aquamarine;width:300px;height:50px;">
+		你好么
+	</div>
+	<div id="distDiv" style="background-color:bisque;width:300px;height:50px;"></div>
+	<button onclick="moveContent()">移除元素</button>
+</body>
+</html>

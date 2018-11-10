@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>range3</title>
+</head>
+<body>
+	<script>
+		function deleteChar(){
+			var div = document.getElementById("myDiv");
+			var textNode = div.firstChild;
+			var rangeObj = document.createRange();
+			// setStart:设置范围的开始点。
+			rangeObj.setStart(textNode,1);
+			// setEnd:设置范围的结束点
+			rangeObj.setEnd(textNode,4);
+			rangeObj.deleteContents();
+		}
+	</script>
+	<div id="myDiv" style="color:red;">
+		这段文字是用来删除的。
+	</div>
+	<button onclick="deleteChar()">删除文字</button>
+</body>
+</html>

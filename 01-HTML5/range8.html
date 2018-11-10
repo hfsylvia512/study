@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>range8</title>
+</head>
+<body>
+	<script>
+		function moveButton(){
+			var btn = document.getElementById("button");
+			var selection = document.getSelection();
+			if (selection.rangeCount > 0) {
+				var range = selection.getRangeAt(0);
+				range.insertNode(btn);
+			}
+		}
+	</script>
+	<div onmouseup="moveButton()" style="width:400px;background-color:bisque;">
+		速度jfk老师jfk是刷卡积分的恐龙时代jfk收费的数据的反抗军拉萨的反馈及时的地方加快速度jfk了第三方接口是否就是打开附件是看了放假肯定是放假就扩大解放了的数据分类的经费落实贷款给地方开始了解昆仑山
+	</div>
+	<button id="button">点击</button>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>range2</title>
+</head>
+<body>
+	<script>
+		function deleteRange(onlyContent){
+			var div = document.getElementById("div");
+			// 创建Range对象
+			var rangeObj = document.createRange();
+			// 获得Range对象后判断，传入的值
+			if(onlyContent){
+				// 判断为真的时候删除内容
+				// selectNodeContents:当前节点的内容
+				// deleteContents：删除文档的区域
+				rangeObj.selectNodeContents(div);
+				rangeObj.deleteContents();
+			}else{
+				// 判断为假的时候删除元素
+				// selectNode：当前节点元素
+				rangeObj.selectNode(div);
+				rangeObj.deleteContents();
+			}
+		}
+	</script>
+	<div id="div" style="background:#e0a0b0;width:300px;height:50px;">
+		元素中的内容
+	</div>
+	<button onclick="deleteRange(true)">删除内容</button>
+	<button onclick="deleteRange(false)">删除元素</button>
+</body>
+</html>
