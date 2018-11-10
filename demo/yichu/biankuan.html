@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#container{
+			width:200px;
+			height:200px;
+			border:2px dotted red;
+			border-top:4px solid #369;
+			border-color:#963;
+			border-right-style:dashed;
+		}
+		#d1{
+			width:0;
+			height:0;
+			border:10px solid transparent;
+			border-right-color:#f0f;
+		}
+		#d2{
+			width:200px;
+			height:200px;
+			border:2px solid #369;
+			border-radius:50%;
+		}
+		#d4{
+			width:200px;
+			height:200px;
+			border:2px solid red;
+			box-shadow:0 0 0 10px;
+		}
+		#txtName{
+			outline:none;
+		}
+	</style>
+</head>
+<body>
+	<h3>轮廓</h3>
+	用户名：<input type="text" id="txtName">
+	<h3>边框阴影</h3>
+	<div id="d4"></div>
+	<h3>边框倒角</h3>
+	<div id="d2"></div>
+	<h3>边框组成</h3>
+	<div id="d1"></div>
+	<h3>基本的边框实线</h3>
+	<div id="container"></div>
+</body>
+</html>

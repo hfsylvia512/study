@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <title>第一个页面</title>
+    <link rel="Shortcut Icon" href="./favicon.ico" type="image/x-icon"/>
+    <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="css/default.css"/>
+    <link href="css/main.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/animate.css"/>
+    <style>
+        .row{margin-left:0;margin-right:0;}
+        p{margin:0;}
+		    ul,li{list-style:none;margin:0;padding:0;}
+        #sec_wenhua{background: #fff;/*margin:30px 15px;*/}
+        .wenhua_title{padding:30px;}
+        .wenhua_txt{  font-weight: 400;  position: relative; line-height: 30px; font-size: 16px;}
+        .wenhua_txt b{ position: absolute;left:2px;bottom:0;width:25px;border:1px solid #9D9B9B;}
+        .time_line{
+            position: relative;;height:99px;border-bottom:2px solid #9D9B9B;
+            text-align: center;line-height: 99px;
+            font-weight: bold;
+        }
+        .time_line>li{height:100%;}
+        .time_line li>a{display: inline-block;width:100%;height:100%;}
+        .time_line span{color:#5D5D5D;position: absolute;left:50%;bottom:6px;width:50%;margin-left:-25%;text-align: center;line-height: 35px;transition: all .5s linear}
+        .time_line s{
+            width:6px;height:6px;border-radius: 50%;background: #5D5D5D;
+            position: absolute;bottom:-4px;left:50%;margin-left:-3px;transition: all .5s linear
+        }
+        .time_line li:hover span{font-size: 2rem;transition: all .2s linear;color:#393939;}
+        .time_line li:hover s{bottom:4px;transition: all .2s linear;}
+        .wenhua_con{padding:0 30px;margin:20px 0 30px 0;}
+        .wenhua_con>.row{margin-top:50px;}
+        .row>.wenCon_txt{padding:50px;}
+        .wenCon_more{text-align: right;line-height: 40px;}
+        .wenCon_more a{color:#5D5D5D;display:inline-block;height:22px;line-height:22px;border-bottom:2px solid #5D5D5D; text-decoration:none;font-weight: bold;}
+        .wenCon_more a:hover{color:#e4393c;}
+        .wenhua_imgLf,.wenhua_imgGt{position: relative;}
+        .wenhua_imgLf .biao{position: absolute;top:45px;left:-6px;width:15%;min-width: 70px;}
+        .wenhua_imgLf b{
+            color:#EDEDED;position: absolute;top:0;left:0;width:100%;height:100%;text-align: center;
+            line-height: 50px;font-size: 16px;
+        }
+        .wenhua_imgGt .biao{position: absolute;top:45px;right:-6px;width:15%;min-width: 70px;}
+        .wenhua_imgGt b{
+            color:#EDEDED;position: absolute;top:0;right:0;width:100%;height:100%;text-align: center;
+            line-height: 50px;font-size: 16px;
+        }
+
+        @media(min-width: 991px){
+            .wenhua_imgLf b,.wenhua_imgGt b{line-height: 30px;font-size: 12px;}
+            #main .container{width:100%;padding:0;}
+            .row>.wenCon_txt{padding:50px;}
+        }
+        @media(min-width: 1199px){
+            .wenhua_imgLf b,.wenhua_imgGt b{line-height: 40px;font-size: 14px;}
+            .row>.wenCon_txt{padding:85px;}
+        }
+        @media(max-width: 991px){
+            .tab-pane .row{margin:50px 0;}
+        }
+        @media(max-width: 768px){
+            .row>.wenCon_txt{padding:30px 0;}
+            .wenhua_con{padding:0 20px;}
+            .wenhua_imgLf .biao,.wenhua_imgGt .biao{top:20px;}
+            .wenhua_imgLf b,.wenhua_imgGt b{line-height: 42px;font-size: 12px;}
+        }
+        @media(max-width: 448px){
+            .wenhua_imgLf b,.wenhua_imgGt b{line-height: 27px;font-size: 12px;}
+        }
+
+        .tab-content .tab-pane{display:none;}
+        .tab-content .tab-pane.active{display: block;}
+        .tab-pane .row{margin:50px 0;}
+
+
+
+    </style>
+</head>
+<body>
+<div id="main">
+    <div class="container">
+        <div id="sec_wenhua">
+            <div class="container">
+                <!--第一块-->
+               <div class="row wenhua_title">
+                    <div class="col-xs-12 col-md-6">
+                        <h1>文化活动</h1>
+                        <p class="wenhua_txt">自强不息、厚德载物、创想中国、创想世纪<b></b></p>
+                    </div>
+                    <div class="col-xs-12 col-md-6 wenhua_time">
+                        <ul class="row time_line" id="tab">
+                            <li id="tab1" class="col-xs-3 active"><a href="#content1" data-toggle="tab"><span>2017</span></a>  <s></s></li>
+                            <li id="tab2" class="col-xs-3 "><a href="#content2" data-toggle="tab"><span>2016 </span></a> <s></s></li>
+                            <li id="tab3" class="col-xs-3 "><a href="#content3" data-toggle="tab"> <span>2015</span></a> <s></s></li>
+                            <li id="tab4" class="col-xs-3 "><a href="#content4" data-toggle="tab"> <span>2014</span></a> <s></s></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--第二块-->
+                <div class="wenhua_con">
+                    <div id="content_box" class="row tab-content">
+                        <div id="content1" class="col-xs-12 tab-pane active" >
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6 wenhua_imgLf">
+                                    <img src="images/wenhau_img.jpg" class="img-responsive" alt=""/>
+                                    <span class="biao">
+                                        <img src="images/biao_lf.png"  class="img-responsive" alt=""/>
+                                        <b>2017.11.15</b>
+                                    </span>
+                                </div>
+                                <div class="col-xs-12 col-md-6 wenCon_txt">
+                                    <h4><a href="">中国森田2017年美国塞班岛欢乐行圆满结束</a></h4>
+                                    <p>2017年8月，中国森田集团伊朗公司传统组织瓯绣员工赴美参加活动，25日凌晨团队抵达塞班，历时5晚7天，于30日凌晨安全返回北京机场为整个活动划上圆满句号。中国森田本着以人为本，员工与企业共同成长的宗旨，秉承人类和谐.....价值观。</p>
+                                    <p class="wenCon_more"><a href="">阅读全文</a></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6 wenCon_txt">
+                                    <h4><a href="">中国森田2017年美国塞班岛欢乐行圆满结束</a></h4>
+                                    <p>2017年8月，中国森田集团伊朗公司传统组织瓯绣员工赴美参加活动，25日凌晨团队抵达塞班，历时5晚7天，于30日凌晨安全返回北京机场为整个活动划上圆满句号。中国森田本着以人为本，员工与企业共同成长的宗旨，秉承人类和谐.....价值观。</p>
+                                    <p class="wenCon_more"><a href="">阅读全文</a></p>
+                                </div>
+                                <div class="col-xs-12 col-md-6 wenhua_imgGt">
+                                    <img src="images/wenhau_img.jpg" class="img-responsive" style="float:right;" alt=""/>
+                                    <span class="biao">
+                                        <img src="images/biao_rt.png"  class="img-responsive" alt=""/>
+                                        <b>2017.11.15</b>
+                                    </span>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6 wenhua_imgLf">
+                                    <img src="images/wenhau_img.jpg" class="img-responsive" alt=""/>
+                            <span class="biao">
+                                <img src="images/biao_lf.png"  class="img-responsive" alt=""/>
+                                <b>2017.11.15</b>
+                            </span>
+                                </div>
+                                <div class="col-xs-12 col-md-6 wenCon_txt">
+                                    <h4><a href="">中国森田2017年美国塞班岛欢乐行圆满结束</a> </h4>
+                                    <p>2017年8月，中国森田集团伊朗公司传统组织瓯绣员工赴美参加活动，25日凌晨团队抵达塞班，历时5晚7天，于30日凌晨安全返回北京机场为整个活动划上圆满句号。中国森田本着以人为本，员工与企业共同成长的宗旨，秉承人类和谐.....价值观。</p>
+                                    <p class="wenCon_more"><a href="">阅读全文</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="content2" class="col-xs-12 tab-pane" >
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6 wenhua_imgLf">
+                                    <img src="images/wenhau_img.jpg" class="img-responsive" alt=""/>
+                                    <span class="biao">
+                                        <img src="images/biao_lf.png"  class="img-responsive" alt=""/>
+                                        <b>2016.11.15</b>
+                                    </span>
+                                </div>
+                                <div class="col-xs-12 col-md-6 wenCon_txt">
+                                    <h4>中国森田2016年美国塞班岛欢乐行圆满结束</h4>
+                                    <p>2016年8月，中国森田集团伊朗公司传统组织瓯绣员工赴美参加活动，25日凌晨团队抵达塞班，历时5晚7天，于30日凌晨安全返回北京机场为整个活动划上圆满句号。中国森田本着以人为本，员工与企业共同成长的宗旨，秉承人类和谐.....价值观。</p>
+                                    <p class="wenCon_more"><a href="">阅读全文</a></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6 wenCon_txt">
+                                    <h4><a href=""> 中国森田2017年美国塞班岛欢乐行圆满结束</a></h4>
+                                    <p>2016年8月，中国森田集团伊朗公司传统组织瓯绣员工赴美参加活动，25日凌晨团队抵达塞班，历时5晚7天，于30日凌晨安全返回北京机场为整个活动划上圆满句号。中国森田本着以人为本，员工与企业共同成长的宗旨，秉承人类和谐.....价值观。</p>
+                                    <p class="wenCon_more"><a href="">阅读全文</a></p>
+                                </div>
+                                <div class="col-xs-12 col-md-6 wenhua_imgGt">
+                                    <img src="images/wenhau_img.jpg" class="img-responsive" alt=""/>
+                            <span class="biao">
+                                <img src="images/biao_rt.png"  class="img-responsive" alt=""/>
+                                <b>2016.11.15</b>
+                            </span>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6 wenhua_imgLf">
+                                    <img src="images/wenhau_img.jpg" class="img-responsive" alt=""/>
+                            <span class="biao">
+                                <img src="images/biao_lf.png"  class="img-responsive" alt=""/>
+                                <b>2016.11.15</b>
+                            </span>
+                                </div>
+                                <div class="col-xs-12 col-md-6 wenCon_txt">
+                                    <h4><a href=""> 中国森田2017年美国塞班岛欢乐行圆满结束</a></h4>
+                                    <p>2017年8月，中国森田集团伊朗公司传统组织瓯绣员工赴美参加活动，25日凌晨团队抵达塞班，历时5晚7天，于30日凌晨安全返回北京机场为整个活动划上圆满句号。中国森田本着以人为本，员工与企业共同成长的宗旨，秉承人类和谐.....价值观。</p>
+                                    <p class="wenCon_more"><a href="">阅读全文</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="content3" class="col-xs-12 tab-pane" >
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6 wenhua_imgLf">
+                                    <img src="images/wenhau_img.jpg" class="img-responsive" alt=""/>
+                            <span class="biao">
+                                <img src="images/biao_lf.png"  class="img-responsive" alt=""/>
+                                <b>2015.11.15</b>
+                            </span>
+                                </div>
+                                <div class="col-xs-12 col-md-6 wenCon_txt">
+                                    <h4><a href="">中国森田2015年美国塞班岛欢乐行圆满结束</a></h4>
+                                    <p>2017年8月，中国森田集团伊朗公司传统组织瓯绣员工赴美参加活动，25日凌晨团队抵达塞班，历时5晚7天，于30日凌晨安全返回北京机场为整个活动划上圆满句号。中国森田本着以人为本，员工与企业共同成长的宗旨，秉承人类和谐.....价值观。</p>
+                                    <p class="wenCon_more"><a href="">阅读全文</a></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6 wenCon_txt">
+                                    <h4><a href=""> 中国森田2017年美国塞班岛欢乐行圆满结束</a></h4>
+                                    <p>2015年8月，中国森田集团伊朗公司传统组织瓯绣员工赴美参加活动，25日凌晨团队抵达塞班，历时5晚7天，于30日凌晨安全返回北京机场为整个活动划上圆满句号。中国森田本着以人为本，员工与企业共同成长的宗旨，秉承人类和谐.....价值观。</p>
+                                    <p class="wenCon_more"><a href="">阅读全文</a></p>
+                                </div>
+                                <div class="col-xs-12 col-md-6 wenhua_imgGt">
+                                    <img src="images/wenhau_img.jpg" class="img-responsive" alt=""/>
+                            <span class="biao">
+                                <img src="images/biao_rt.png"  class="img-responsive" alt=""/>
+                                <b>2017.11.15</b>
+                            </span>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6 wenhua_imgLf">
+                                    <img src="images/wenhau_img.jpg" class="img-responsive" alt=""/>
+                            <span class="biao">
+                                <img src="images/biao_lf.png"  class="img-responsive" alt=""/>
+                                <b>2017.11.15</b>
+                            </span>
+                                </div>
+                                <div class="col-xs-12 col-md-6 wenCon_txt">
+                                    <h4><a href="">中国森田2017年美国塞班岛欢乐行圆满结束</a></h4>
+                                    <p>2015年8月，中国森田集团伊朗公司传统组织瓯绣员工赴美参加活动，25日凌晨团队抵达塞班，历时5晚7天，于30日凌晨安全返回北京机场为整个活动划上圆满句号。中国森田本着以人为本，员工与企业共同成长的宗旨，秉承人类和谐.....价值观。</p>
+                                    <p class="wenCon_more"><a href="">阅读全文</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="content4" class="col-xs-12 tab-pane" >
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6 wenhua_imgLf">
+                                    <img src="images/wenhau_img.jpg" class="img-responsive" alt=""/>
+                            <span class="biao">
+                                <img src="images/biao_lf.png"  class="img-responsive" alt=""/>
+                                <b>2014.11.15</b>
+                            </span>
+                                </div>
+                                <div class="col-xs-12 col-md-6 wenCon_txt">
+                                    <h4><a href="">中国森田2014年美国塞班岛欢乐行圆满结束</a></h4>
+                                    <p>2017年8月，中国森田集团伊朗公司传统组织瓯绣员工赴美参加活动，25日凌晨团队抵达塞班，历时5晚7天，于30日凌晨安全返回北京机场为整个活动划上圆满句号。中国森田本着以人为本，员工与企业共同成长的宗旨，秉承人类和谐.....价值观。</p>
+                                    <p class="wenCon_more"><a href="">阅读全文</a></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6 wenCon_txt">
+                                    <h4><a href="">中国森田2017年美国塞班岛欢乐行圆满结束</a></h4>
+                                    <p>2014年8月，中国森田集团伊朗公司传统组织瓯绣员工赴美参加活动，25日凌晨团队抵达塞班，历时5晚7天，于30日凌晨安全返回北京机场为整个活动划上圆满句号。中国森田本着以人为本，员工与企业共同成长的宗旨，秉承人类和谐.....价值观。</p>
+                                    <p class="wenCon_more"><a href="">阅读全文</a></p>
+                                </div>
+                                <div class="col-xs-12 col-md-6 wenhua_imgGt">
+                                    <img src="images/wenhau_img.jpg" class="img-responsive" alt=""/>
+                            <span class="biao">
+                                <img src="images/biao_rt.png"  class="img-responsive" alt=""/>
+                                <b>2017.11.15</b>
+                            </span>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-6 wenhua_imgLf">
+                                    <img src="images/wenhau_img.jpg" class="img-responsive" alt=""/>
+                            <span class="biao">
+                                <img src="images/biao_lf.png"  class="img-responsive" alt=""/>
+                                <b>2017.11.15</b>
+                            </span>
+                                </div>
+                                <div class="col-xs-12 col-md-6 wenCon_txt">
+                                    <h4><a href="">中国森田2017年美国塞班岛欢乐行圆满结束</a></h4>
+                                    <p>2014年8月，中国森田集团伊朗公司传统组织瓯绣员工赴美参加活动，25日凌晨团队抵达塞班，历时5晚7天，于30日凌晨安全返回北京机场为整个活动划上圆满句号。中国森田本着以人为本，员工与企业共同成长的宗旨，秉承人类和谐.....价值观。</p>
+                                    <p class="wenCon_more"><a href="">阅读全文</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

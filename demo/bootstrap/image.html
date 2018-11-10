@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bootstrap图像</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- IE版本小于9 自动选择以下js-->
+	<!--[if lt IE 9]>
+	<script scr="js/html5shiv.min.js"></script>
+	<script scr="js/respond.min.js"></script>
+	<![endif]-->
+	<script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+     <style type="text/css">
+      * {
+        margin: 0;
+        }
+      html {
+        padding: 20px;
+        font: 12px/20px Arial, sans-serif;
+        }
+      div {
+        opacity: 0.7;
+        position: relative;
+        }
+      h1 {
+        font: inherit;
+        font-weight: bold;
+        }
+      #div1, #div2 {
+        border: 1px solid #696;
+        padding: 10px;
+        background-color: #cfc;
+        }
+      #div1 {
+        z-index: 5;
+        margin-bottom: 190px;
+        }
+      #div2 {
+        z-index: 2;
+        }
+      #div3 {
+        z-index: 4;
+        opacity: 1;
+        position: absolute;
+        top: 40px;
+        left: 180px;
+        width: 330px;
+        border: 1px solid #900;
+        background-color: #fdd;
+        padding: 40px 20px 20px;
+        }
+      #div4, #div5 {
+        border: 1px solid #996;
+        background-color: #ffc;
+        }
+      #div4 {
+        z-index: 6;
+        margin-bottom: 15px;
+        padding: 25px 10px 5px;
+        }
+      #div5 {
+        z-index: 1;
+        margin-top: 15px;
+        padding: 5px 10px;
+        }
+      #div6 {
+        z-index: 3;
+        position: absolute;
+        top: 20px;
+        left: 180px;
+        width: 150px;
+        height: 125px;
+        border: 1px solid #009;
+        padding-top: 125px;
+        background-color: #ddf;
+        text-align: center;
+        }
+    </style>
+</head>
+<body style="padding:50px;background-color:#ccc;">
+	<nav class="">
+		<div class="container" style="background-color:#fff;">
+			<!-- 品牌图标 -->
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Bootstrap</a>
+				<p class="navbar-text"><a href="#">欢迎光临</a></p>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li ><a href="#">起步</a></li>
+					<li class="active"><a href="#">全局样式</a></li>
+					<li><a href="#">组件</a></li>
+					<li><a href="#">插件</a></li>
+					<li><a href="#">定制</a></li>
+					<li><a href="#">网站实例</a></li>
+				</ul>
+				<!-- 导航条中的表单 -->
+				<form action="" class="navbar-form navbar-left">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button type="button" class="btn btn-default">Search</button>
+				</form >
+			</div>
+		</div>
+	</nav>
+	
+	<div class="container" style="background-color:#fff;">
+		<!-- 分页效果 -->
+		<h2 class="page-header">分页效果</h2>
+		<div class="text-center">
+			<ul class="pagination pagination-lg">
+				<li><a href="">&laquo;</a></li>
+				<li class="active"><a href="">1</a></li>
+				<li><a href="">2</a></li>
+				<li><a href="">3</a></li>
+				<li><a href="">4</a></li>
+				<li><a href="">5</a></li>
+				<li><a href="">6</a></li>
+				<li><a href="">7</a></li>
+				<li><a href="">8</a></li>
+				<li><a href="">9</a></li>
+				<li><a href="">10</a></li>
+				<li><a href="">&raquo;</a></li>
+			</ul>
+		</div>
+		<!-- 缩略图 -->
+		<h2 class="page-he缩略图ader"></h2>
+		<div class="row">
+			<div class="col-md-4">
+				<img src="images/6.jpg" class="thumbnail" style="max-width:100%;max-height:100%;" alt="">
+				<div class="caption">HTML入门</div>
+			</div>
+			<div class="col-md-4">
+				<img src="images/9.jpg" style="max-width:100%;max-height:100%;" class="thumbnail" alt="">
+				<div class="caption">HTML入门</div>
+			</div>
+			<div class="col-md-4">
+				<img src="images/8.jpg" style="max-width:100%;max-height:100%;" class="thumbnail" alt="">
+				<div class="caption">HTML入门</div>
+			</div>
+		</div>
+		<!-- 路径导航 -->
+		<h2 class="page-header">选项卡</h2>
+		<ol class="breadcrumb">
+			<li ><a href="">php</a></li>
+			<li><a href="">javascript</a></li>
+			<li><a href="">apache</a></li>
+			<li>mysql</li>
+		</ol>
+		<!-- 选项卡 -->
+		<h2 class="page-header">选项卡</h2>
+
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="">HTML</a></li>
+			<li><a href="">PHP</a></li>
+			<li><a href="">JAVA</a></li>
+		</ul>
+		<br><br>
+		<ul class="nav nav-pills">
+			<li class="active"><a href="">HTML</a></li>
+			<li><a href="">PHP</a></li>
+			<li><a href="">JAVA</a></li>
+		</ul>
+		<!-- CSS组件 输入框 -->
+		<h2 classd="page-header">输入框</h2>
+		<div class="input-group">
+			<span class="input-group-addon">$</span>
+			<input type="text" class="form-control " placeholder="username">
+			<span class="input-group-addon">.00</span>
+		</div>
+		<!-- 按钮下拉框 -->
+		<h2 class="page-header">按钮下拉框</h2>
+		<div class="btn-group ">
+			<button type="button" class="btn btn-success">HTML超级文本</button><button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">
+				<li><a href="#">CSS</a></li>
+				<li><a href="#">JAVA</a></li>
+				<li><a href="#">PHP</a></li>
+				<li><a href="#">MYSQL</a></li>
+			</ul>
+		</div>
+		<!-- 按钮应用 -->
+		<h2 class="page-header">按钮应用</h2>
+		<div class="btn-toolbar">
+			<div class="btn-group btn-group-lg">
+				<button type="button" class="btn btn-primary">Left</button>
+				<button type="button" class="btn btn-primary">Center</button>
+				<button type="button" class="btn btn-primary">Right</button>
+			</div>
+			<div class="btn-group btn-group-sm">
+				<button type="button" class="btn btn-success">1</button>
+				<button type="button" class="btn btn-success">2</button>
+				<button type="button" class="btn btn-success">3</button>
+			</div>
+			<div class="btn-group btn-group-xs">
+				<button type="button" class="btn btn-warning">Top</button>
+				<button type="button" class="btn btn-warning">Middel</button>
+				<button type="button" class="btn btn-warning">Bottom</button>
+			</div>
+		</div>
+		
+		<!-- 下拉菜单 -->
+		<h2 class="page-header">下拉菜单应用</h2>
+		<div class="dropdown">
+			<button type="button" class="btn btn-default" data-toggle="dropdown">PHP课程系列 <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">
+				<li><a href="#">PHP</a></li>
+				<li><a href="#">HTML</a></li>
+				<li><a href="#">JAVASCRIPT</a></li>
+				<li class="divider"></li>
+				<li><a href="#">APACHE</a></li>
+			</ul>
+		</div>
+
+		<!-- 浮动和清除 -->
+	<div class="">
+		<h2 class="page-header">浮动和清除</h2>
+	</div>
+	<div style="border:1px solid red;width:330px;" class="clearfix">
+		<ul class="list-unstyled">
+			<li class="pull-left" style="padding:10px;">
+				<a href="#">
+					<img src="images/2.jpg" alt="" style="max-width:100%;max-height:100%;height:88px;width:142px;"><br>
+					<p>你是最美的</p>
+				</a>
+			</li>
+			<li class="pull-left" style="padding:10px;">
+				<a href="#">
+					<img src="images/3.jpg" alt="" style="max-width:100%;max-height:100%;height:88px;width:142px;"><br>
+					<p>你是最美的</p>
+				</a>
+			</li>
+			<li class="pull-left" style="padding:10px;">
+				<a href="#">
+					<img src="images/4.jpg" alt="" style="max-width:100%;max-height:100%;height:88px;width:142px;"><br>
+					<p>你是最美的</p>
+				</a>
+			</li>
+			<li class="pull-left" style="padding:10px;">
+				<a href="#">
+					<img src="images/5.jpg" alt="" style="max-width:100%;max-height:100%;height:88px;width:142px;"><br>
+					<p>你是最美的</p>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- 图片样式 -->
+		<h2 class="page-header">图片样式应用</h2>
+		<div> 
+			<img src="images/1.jpg" style="width:400px;" class="img-responsive img-circle center-block" alt="">
+			<!-- 三角符号 -->
+			<span class="caret"></span>
+			<p>
+				#新华社快讯##习近平出访#[习近平离京出访]中共中央总书记、国家主席习近平10日上午乘专机离开北京，应越南社会主义共和国主席陈大光邀请，赴越南岘港出席亚太经合组织第二十五次领导人非正式会议；应越南共产党中央委员会总书记阮富仲、越南社会主义共和国主席陈大光，老挝人民革命党中央委员会总书记、老挝人民民主共和国主席本扬邀请，对越南、老挝进行国事访问。陪同习近平出访的有：中共中央政治局委员、中央书记处书记、中央办公厅主任丁薛祥，中共中央政治局委员、中央财经领导小组办公室主任刘鹤，中共中央政治局委员、国务委员杨洁篪等。
+			</p>
+		</div>
+		<div class="row">
+			<div id="div1">
+		      <h1>Division Element #1</h1>
+		      <code>position: relative;<br/>
+		      z-index: 5;</code>
+		    </div>
+
+		    <div id="div2">
+		      <h1>Division Element #2</h1>
+		      <code>position: relative;<br/>
+		      z-index: 2;</code>
+		    </div>
+
+		    <div id="div3">
+
+		      <div id="div4">
+		        <h1>Division Element #4</h1>
+		        <code>position: relative;<br/>
+		        z-index: 6;</code>
+		      </div>
+
+		      <h1>Division Element #3</h1>
+		      <code>position: absolute;<br/>
+		      z-index: 4;</code>
+
+		      <div id="div5">
+		        <h1>Division Element #5</h1>
+		        <code>position: relative;<br/>
+		        z-index: 1;</code>
+		      </div>
+		   
+		      <div id="div6">
+		        <h1>Division Element #6</h1>
+		        <code>position: absolute;<br/>
+		        z-index: 3;</code>
+		      </div>
+
+		    </div>
+				</div>
+	</div>
+	 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    
+</body>
+</html>
